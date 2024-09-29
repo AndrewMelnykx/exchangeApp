@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "jsx": "react-jsx",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "Bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "baseUrl": "./",
+    "types": ["node", "jest", "@testing-library/jest-dom"],
+
+    "paths": {
+      "@data/*": ["src/data/*"],
+      "@assets/*": ["src/assets/*"],
+      "@redux/*": ["src/components/redux/*"],
+      "@slices/*": ["src/components/redux/slices/*"],
+      "@selectors/*": ["src/components/redux/selectors/*"],
+      "@helpers/*": ["src/helpers/*"],
+      "@footer/*": ["src/components/footer/*"],
+      "@header/*": ["src/components/header/*"],
+      "@card/*": ["src/components/exchange-card/*"],
+      "@custom-inputs/*": ["src/components/custom-inputs/*"]
+
+      // "@destination/*": ["client/src/components/travels/destination/*"],
+      // "@custom-ui/*": ["client/src/components/custom-ui/*"]
+    }
+  },
+  "include": ["src/**/*.ts", "src/**/*.tsx"],
+  "exclude": ["node_modules"]
+}
