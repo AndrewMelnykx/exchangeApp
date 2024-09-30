@@ -1,50 +1,45 @@
-# React + TypeScript + Vite
+ExchangeApp [LINK](https://andrewmelnykx.github.io/exchangeApp/)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+![Screenshot 2024-09-30 175243](https://github.com/user-attachments/assets/ba1f1881-4e4c-45b9-a5ef-4250b4cd9132)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This project is an exchange application built using React, TypeScript, Redux, and Material-UI (MUI).
+Users can interact with currency exchange data through a modern UI.
 
-## Expanding the ESLint configuration
+Features
+React with TypeScript for scalable development.
+Redux Toolkit for efficient state management.
+Material-UI (MUI) for a responsive and modern user interface.
+Vite for fast development and build processes.
+Axios for making API requests.
+React Toastify for notifications.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Getting Started
 
-- Configure the top-level `parserOptions` property like this:
+Prerequisites
+Before you begin, ensure you have the following installed:
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+Node.js (version 16 or higher) – Download here
+npm (comes with Node.js) or yarn – Download here
+Git – Download here
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+1.Clone the Repository
+git clone https://github.com/AndrewMelnykx/exchangeApp.git
+cd exchangeApp
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+2.Install Dependencies
+Once the repository is cloned, navigate to the project directory and install the required dependencies:
+
+bash
+# Using npm
+npm install
+
+# OR using yarn
+yarn install
+
+3.Run the Project Locally
+To run the project locally, use the following command:
+
+bash
+npm run dev
