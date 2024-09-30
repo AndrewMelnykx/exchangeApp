@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <Box
       width={"100%"}
-      height={"15%"}
+      height={"20%"}
       display={"flex"}
       bgcolor={darkPurple}
       alignSelf={"flex-start"}

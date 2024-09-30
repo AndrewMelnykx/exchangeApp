@@ -4,6 +4,8 @@
     "module": "ESNext",
     "jsx": "react-jsx",
     "strict": true,
+    "outDir": "./dist",
+    "rootDir": "./src",
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
@@ -25,9 +27,6 @@
       "@header/*": ["src/components/header/*"],
       "@card/*": ["src/components/exchange-card/*"],
       "@custom-inputs/*": ["src/components/custom-inputs/*"]
-
-      // "@destination/*": ["client/src/components/travels/destination/*"],
-      // "@custom-ui/*": ["client/src/components/custom-ui/*"]
     }
   },
   "include": ["src/**/*.ts", "src/**/*.tsx"],

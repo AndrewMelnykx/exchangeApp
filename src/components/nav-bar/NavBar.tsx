@@ -90,7 +90,7 @@ const NavBar = () => {
             <img src={USAFlag} alt="USAFlag" style={{ width: "20px" }} />
             <Typography variant="h5"> USD$</Typography>
           </Box>
-          <Typography variant="h5"> Per 1.00$</Typography>
+          <Typography variant="h6"> Per 1.00$</Typography>
         </Box>
 
         <Box display={"flex"} flexDirection={"column"} ml={4} mt={4} mr={2}>
@@ -100,7 +100,7 @@ const NavBar = () => {
               alt="Ukraine Flag"
               style={{ marginLeft: "12%", width: "20px" }}
             />
-            <Typography variant="h5">UAH₴</Typography>
+            <Typography variant="h6">UAH₴</Typography>
           </Box>
           <Typography
             ml={3}

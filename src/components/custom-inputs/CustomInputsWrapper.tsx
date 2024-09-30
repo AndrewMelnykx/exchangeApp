@@ -74,7 +74,7 @@ const CustomInputsWrapper = () => {
       <Box display={"flex"} width={"40%"} height={"40%"}>
         <IconButton
           onClick={handleButtonClick}
-          sx={{ width: "12%", height: "70%", ml: "2%", mt: "2%" }}
+          sx={{ width: "60px", height: "60px", ml: "2%", mt: "2%" }}
         >
           <CompareArrowsIcon />
         </IconButton>

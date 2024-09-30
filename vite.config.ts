@@ -8,8 +8,8 @@ dotenv.config();
 export default defineConfig({
   plugins: [react()],
   define: { "process.env": process.env },
-  build: { outDir: "./dist" },
-  base: "/",
+  build: { outDir: path.resolve(__dirname, "dist") },
+  base: "/exchangeApp/",
   resolve: {
     alias: {
       "@data": path.resolve(__dirname, "src/data"),
