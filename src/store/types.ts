@@ -2,8 +2,8 @@ import { Currency } from "@custom-inputs/types";
 
 interface DataHandlingTypes {
   ratesData: string | null;
-  currencyFromInDollarData: string | null;
-  currencyToIntoDollar: string | null;
+  sourceCurrencyToUSDData: string | null;
+  targetCurrencyToUSDData: string | null;
 }
 
 interface ConvertCurrencyParams {
@@ -32,13 +32,14 @@ type CurrencyResponse = {
 
 interface ElementsHandlingTypes {
   amountInputValue: string;
-  fromInputValue: Currency | null;
-  toInputValue: Currency | null;
+  sourceInputValue: Currency | null;
+  targetInputValue: Currency | null;
 }
 
 interface CurrencyRequestTypes {
   sourceCurrency: string;
   targetCurrency: string;
+  typeOfCurrency: string;
 }
 
 export type {

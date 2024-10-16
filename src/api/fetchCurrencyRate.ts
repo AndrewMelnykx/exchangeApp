@@ -1,4 +1,4 @@
-import { CurrencyRequestTypes } from "@redux/types";
+import { CurrencyRequestTypes } from "@store/types";
 import axios from "axios";
 
 const url = process.env.VITE_EXCHANGE_APP_CURRENCY_LATEST_LINK;
@@ -6,6 +6,7 @@ const url = process.env.VITE_EXCHANGE_APP_CURRENCY_LATEST_LINK;
 const fetchCurrencyRate = async ({
   sourceCurrency,
   targetCurrency,
+  typeOfCurrency,
 }: CurrencyRequestTypes) => {
   try {
     const fullUrl = `${url}${sourceCurrency}-${targetCurrency}`;
@@ -16,7 +17,7 @@ const fetchCurrencyRate = async ({
     const rateKey = `${sourceCurrency}${targetCurrency}`;
     const rateData = data[rateKey];
 
-    const conversionRate = rateData.bid;
+    const conversionRate = rateData?.[typeOfCurrency];
 
     return conversionRate;
   } catch (error) {

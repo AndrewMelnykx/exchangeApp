@@ -4,24 +4,25 @@ import AmountInput from "./AmountInput";
 import CompareArrowsIcon from "@mui/icons-material/CompareArrows";
 import CustomAutocomplete from "./CustomAutocomplete";
 import { Currency } from "./types";
-import { UseStoreDispatcher } from "@redux/store/store";
-import ElementsSlice from "@redux/slices/elements-slice";
+import { UseStoreDispatcher } from "@store/index";
+import { ElementsSlice } from "@store/currency-rate/slice";
 import { useSelector } from "react-redux";
 import {
-  fromInputValueSelector,
-  toInputValueSelector,
-} from "@redux/selectors/elements-selectors";
+  sourceInputValueSelector,
+  targetInputValueSelector,
+} from "@storeCurrencyRate/selectors";
 import {
-  fetchCurrencyFromInDollarThunk,
-  fetchCurrencyIntoDollarThunk,
-} from "@redux/slices/actions-slice";
-import { dollarUSA } from "@helpers/constants";
+  fetchSourceCurrencyToDollar,
+  fetchTargetCurrencyToDollar,
+} from "@store/currency-rate/actions";
+import { ask, dollarUSA } from "@helpers/constants";
+import "./index.scss";
 
 const CustomInputsWrapper = () => {
   const dispatch = UseStoreDispatcher();
   const elementsActions = ElementsSlice.actions;
-  const fromInputState = useSelector(fromInputValueSelector);
-  const toInputState = useSelector(toInputValueSelector);
+  const fromInputState = useSelector(sourceInputValueSelector);
+  const toInputState = useSelector(targetInputValueSelector);
 
   const handleFromInputChange = (
     e: SyntheticEvent<Element, Event>,
@@ -37,21 +38,23 @@ const CustomInputsWrapper = () => {
     dispatch(elementsActions.handleToInputRedux(newValue));
   };
 
-  const handleButtonClick = async () => {
+  const handleSwitchCurrency = async () => {
     dispatch(elementsActions.handleFromInputRedux(toInputState));
     dispatch(elementsActions.handleToInputRedux(fromInputState));
     const inputWithCurrencyAreValid = fromInputState && toInputState;
     if (inputWithCurrencyAreValid) {
       await dispatch(
-        fetchCurrencyFromInDollarThunk({
+        fetchSourceCurrencyToDollar({
           sourceCurrency: dollarUSA,
           targetCurrency: fromInputState.currencyISO,
+          typeOfCurrency: ask,
         })
       );
       await dispatch(
-        fetchCurrencyIntoDollarThunk({
+        fetchTargetCurrencyToDollar({
           sourceCurrency: dollarUSA,
           targetCurrency: toInputState.currencyISO,
+          typeOfCurrency: ask,
         })
       );
     }
@@ -72,10 +75,7 @@ const CustomInputsWrapper = () => {
       </Box>
 
       <Box display={"flex"} width={"40%"} height={"40%"}>
-        <IconButton
-          onClick={handleButtonClick}
-          sx={{ width: "60px", height: "60px", ml: "2%", mt: "2%" }}
-        >
+        <IconButton onClick={handleSwitchCurrency} className="switch-button">
           <CompareArrowsIcon />
         </IconButton>
         <CustomAutocomplete

@@ -14,19 +14,20 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "baseUrl": "./",
-    "types": ["node", "jest", "@testing-library/jest-dom"],
+    "types": ["node"],
 
     "paths": {
-      "@data/*": ["src/data/*"],
+      "@api/*": ["src/api/*"],
       "@assets/*": ["src/assets/*"],
-      "@redux/*": ["src/components/redux/*"],
-      "@slices/*": ["src/components/redux/slices/*"],
+      "@store/*": ["src/store/*"],
+      "@storeCurrencyRate/*": ["src/store/currency-rate/*"],
       "@selectors/*": ["src/components/redux/selectors/*"],
       "@helpers/*": ["src/helpers/*"],
       "@footer/*": ["src/components/footer/*"],
       "@header/*": ["src/components/header/*"],
       "@card/*": ["src/components/exchange-card/*"],
-      "@custom-inputs/*": ["src/components/custom-inputs/*"]
+      "@custom-inputs/*": ["src/components/custom-inputs/*"],
+      "@variables": ["src/helpers/_variables.scss"]
     }
   },
   "include": ["src/**/*.ts", "src/**/*.tsx"],

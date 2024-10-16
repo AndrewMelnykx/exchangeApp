@@ -5,8 +5,8 @@ import {
   InputLabel,
   TextField,
 } from "@mui/material";
-import { UseStoreDispatcher } from "@redux/store/store";
-import ElementsSlice from "@redux/slices/elements-slice";
+import { UseStoreDispatcher } from "@store/index";
+import { ElementsSlice } from "@store/currency-rate/slice";
 
 const AmountInput = () => {
   const dispatch = UseStoreDispatcher();

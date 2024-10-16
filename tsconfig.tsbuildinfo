@@ -1,1 +1,30 @@
-{"root":["./src/vite-env.d.ts","./src/components/custom-inputs/types.ts","./src/components/redux/types.ts","./src/components/redux/reducers/rootreducer.ts","./src/components/redux/selectors/data-selectors.ts","./src/components/redux/selectors/elements-selectors.ts","./src/components/redux/slices/actions-slice.ts","./src/components/redux/slices/data-slice.ts","./src/components/redux/slices/elements-slice.ts","./src/components/redux/store/store.ts","./src/data/fetched-data/fetchcurrencyask.ts","./src/data/fetched-data/fetchcurrencyrate.ts","./src/data/static-data/currencylist.ts","./src/helpers/colors.ts","./src/helpers/constants.ts","./src/helpers/helping-funcs.ts","./src/helpers/theme.ts","./src/app.tsx","./src/main.tsx","./src/components/custom-inputs/amountinput.tsx","./src/components/custom-inputs/customautocomplete.tsx","./src/components/custom-inputs/custominputswrapper.tsx","./src/components/exchange-card/exchangecard.tsx","./src/components/header/header.tsx","./src/components/nav-bar/navbar.tsx"],"version":"5.6.2"}
+{
+  "root": [
+    "./src/vite-env.d.ts",
+    "./src/components/custom-inputs/types.ts",
+    "./src/components/redux/types.ts",
+    "./src/components/redux/reducers/rootreducer.ts",
+    "./src/components/redux/selectors/data-selectors.ts",
+    "./src/components/redux/selectors/elements-selectors.ts",
+    "./src/components/redux/slices/actions-slice.ts",
+    "./src/components/redux/slices/data-slice.ts",
+    "./src/components/redux/slices/elements-slice.ts",
+    "./src/components/redux/store/store.ts",
+    "./src/data/fetched-data/fetchcurrencyask.ts",
+    "./src/data/fetched-data/fetchcurrencyrate.ts",
+    "./src/data/static-data/currencylist.ts",
+    "./src/helpers/colors.ts",
+    "./src/helpers/constants.ts",
+    "./src/helpers/helping-funcs.ts",
+    "./src/helpers/theme.ts",
+    "./src/app.tsx",
+    "./src/main.tsx",
+    "./src/components/custom-inputs/amountinput.tsx",
+    "./src/components/custom-inputs/customautocomplete.tsx",
+    "./src/components/custom-inputs/custominputswrapper.tsx",
+    "./src/components/exchange-card/exchangecard.tsx",
+    "./src/components/header/header.tsx",
+    "./src/components/nav-bar/navbar.tsx"
+  ],
+  "version": "5.6.2"
+}

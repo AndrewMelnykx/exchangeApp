@@ -1,0 +1,17 @@
+@use "@variables" as *;
+
+.main-header-wrapper {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  background-color: var(--dark-purple-color) !important;
+  align-self: flex-start;
+}
+.navbar-typography-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 16px;
+  width: 100%;
+  height: 100%;
+}

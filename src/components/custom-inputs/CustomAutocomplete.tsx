@@ -1,6 +1,6 @@
 import React from "react";
 import { TextField, Box, Autocomplete } from "@mui/material";
-import { currencies } from "@data/static-data/currencyList";
+import { currencies } from "@helpers/constants";
 import { CustomAutocompleteProps } from "./types";
 const CustomAutocomplete: React.FC<CustomAutocompleteProps> = ({
   placeholder,

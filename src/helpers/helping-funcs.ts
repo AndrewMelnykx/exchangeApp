@@ -11,8 +11,7 @@ const convertCurrency = (
 
   if (isNaN(amountNum) || isNaN(rateFromNum) || isNaN(rateToNum)) return null;
 
-  const amountInUSD = amountNum / rateFromNum;
-  const convertedAmount = amountInUSD * rateToNum;
+  const convertedAmount = (amountNum / rateFromNum) * rateToNum;
 
   return convertedAmount.toFixed(4);
 };
